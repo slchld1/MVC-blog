@@ -3,14 +3,14 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
-const utils = require('./utils/util');
+const auth = require('./utils/auth');
 const sequelize = require('./config/connections')
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const hbs = exphbs.create({ utils });
+const hbs = exphbs.create({ auth });
 
 const newSession = {
     secret: 'keyboard cat',
