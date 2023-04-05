@@ -27,8 +27,8 @@ const userData = [
     }
 ]
 
-const seedingUsers = () => {
-    User.bulkCreate(userData, {
+const seedingUsers = async() => {
+    await User.bulkCreate(userData, {
         individualHooks: true,
         returning: true,
     });

@@ -78,8 +78,8 @@ const commentData = [
     }
 ]
 
-const seedingComments = () => {
-    Comment.bulkCreate(commentData, {
+const seedingComments = async() => {
+    await Comment.bulkCreate(commentData, {
         individualHooks: true,
         returning: true,
     });

@@ -28,8 +28,8 @@ const blogData = [
     }
 ]
 
-const seedingBlog = () => {
-    Blog.bulkCreate(blogData, {
+const seedingBlog = async () => {
+    await Blog.bulkCreate(blogData, {
         individualHooks: true,
         returning: true,
     });
