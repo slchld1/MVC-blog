@@ -5,8 +5,8 @@
         <div class="blog-card"> 
         <a class="edit-blog" href="/dashboard/edit/{{blog.id}}">
         <header><b>Title:</b> {{blog_title}}</header>
-        <p><b>Description:</b> {{blog_description}}</p>
-        <small>{{format_date created_at}} created by {{blog.user.username}}</small>
+        <p class="description"><b>Description:</b> {{blog_description}}</p>
+        <small><b>{{format_date created_at}}</b> created by <b>{{blog.user.username}}</b></small>
         <hr>
         <br/></a>
         </div>

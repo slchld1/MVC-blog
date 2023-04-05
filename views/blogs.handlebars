@@ -1,16 +1,18 @@
 <div class="container">
     <h2>Add a new post</h2>
     <form id="newPost">
-        <div class="form-group">
-            <label for="post-title">Title:</label>
-            <input type="text" id="post-title" name="post-title">
+        <div class="form-group-title">
+            <label for="post-title"><b>Title:</b></label>
+            <input type="text" class="post-title" id="post-title" name="post-title">
         </div>
-        <div class="form-group">
-            <label for="post-context">Content:</label>
+        <div class="form-group-content">
+            <label for="post-context"><b>Content:</b></label>
             <br>
-            <input class="textarea-large" id="post-context" name="post-context">
+            <textarea class="textarea-large" id="post-context" name="post-context"></textarea>
         </div>
-        <button id="submit">Submit</button>
+        <div class="post-submit">
+        <button class="btn btnS" id="submit">Submit</button>
+        </div>
     </form>
 </div>
 <div class="container">
@@ -20,7 +22,7 @@
         <a class="view-blog" href="/dashboard/view/{{blog.id}}">
         <header><b>Title:</b> {{blog_title}}</header>
         <p><b>Description:</b> {{blog_description}}</p>
-        <small>{{format_date created_at}} created by {{blog.user.username}}</small>
+        <small><b>{{format_date created_at}}</b> created by <b>{{blog.user.username}}</b></small>
         <hr>
         <br/></a>
         </div>

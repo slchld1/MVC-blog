@@ -1,19 +1,21 @@
 <div class="container">
     <h3 class="edit-title">Edit Post</h3>
     <form class="edit-form" id="{{blog.id}}">
-        <div class="form-group">
-             <label for="blog-title">Blog title:</label>
+        <div class="form-group-edit">
+             <label for="blog-title"><b>Blog title:</b></label>
              <input type="text" id="blog-title" value="{{blog.blog_title}}"/>
         </div>
-        <div class="form-group">
-            <label for="blog-context">Description:</label>
-            <input type="text" id="blog-context" value="{{blog.blog_description}}"/>
+        <div class="form-group-edit-c">
+            <label for="blog-context"><b>Description:</b></label>
+            <textarea type="text" class="textarea-large" id="blog-context">{{blog.blog_description}}</textarea>
         </div>
         <div class="form-group">
-            <p>created on {{format_date blog.created_at}} by {{blog.user.username}}</p>
+            <p>created on <b>{{format_date blog.created_at}}</b> by <b>{{blog.user.username}}</b></p>
         </div>
+        <div class="buttons-edit"> 
         <button type="submit" class="button-save">Save</button>
         <button type="button" class="button-red">Delete</button>
+        </div>
     </form>
 </div>
 

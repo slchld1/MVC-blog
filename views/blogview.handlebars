@@ -1,24 +1,27 @@
 <div class="container">
-    <h3 class="blog-title">Post by {{blog.user.username}}</h3>
     <section class="blog-section" id="{{blog.id}}">
-        <div class="blog-group">
-             <label for="blog-title">Blog title:</label>
+        <div class="blog-group-header">
+             <h3 for="blog-title">Title:</h3>
              <h3 class= "title">{{blog.blog_title}}</h3>
         </div>
-        <div class="blog-group">
-            <label for="blog-context">Description:</label>
-            <p id="context">{{blog.blog_description}}</p>
+        <div class="blog-group-desc">
+            <h3 for="blog-context">Description:</h3>
+            <p class="context">{{blog.blog_description}}</p>
         </div>
-        <div class="blog-group">
-            <p>created on {{format_date blog.created_at}}</p>
+        <div class="blog-group-end">
+            <p>created on <b>{{format_date blog.created_at}}</b></p>
+            <small> post by <b>{{blog.user.username}}</b></small>
         </div>
-
-        {{> comment post.comments}}
-
     </section>
+    <hr/>
     <form class="commentSection">
     <h4>Write a Comment</h4>
-    <textarea id="commentBox" cols="30" rows="5"></textarea>
-    <button class="sumbit">post</button>
+    <textarea id="commentBox" cols="40" rows="3"></textarea>
+    <button type="sumbit" class="post-comment">post</button>
     </form>
+        <div class="posted-comments">
+        {{> comment blog.comments}}
+        </div>
 </div>
+
+<script src="/js/comment.js"></script>

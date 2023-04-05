@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="card">
+<div class="newContainer">
+<div class="card">
         <h3 class="card-header">Login</h3>
         <form id="login-form">
             <div class="form-group">
@@ -10,11 +10,16 @@
                 <label for="password-login">Password</label>
                 <input type="password" class="form-control" id="password-login" placeholder="Password">
             </div>
-            <button type="submit" class="btn btn-primary btn-lg">Login</button>
+            <div class="btn-tab">
+            <button type="submit" class="btn btn-lg">Login</button>
+            </div>
             <hr>
-            <a class="login-link" href="/register">Don't have an account?</a>
+            <div class="register-link">
+                <a class="login-link" href="/register">Don't have an account?</a>
+            </div>
         </form>
     </div>
+
 </div>
 
 <script src="/js/login.js"></script>
