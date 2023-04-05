@@ -27,22 +27,22 @@
                 aria-controls="navbarExample01"
                 aria-expanded="false"
                 aria-label="Toggle navigation"  >
-               <i class="fas fa-bars"></i>
+            <i class="fas fa-bars"></i>
             </button>
-                 <div class="collapse navbar-collapse" id="navbarExample01">
+                <div class="collapse navbar-collapse" id="navbarExample01">
 
                     <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                         <li class="nav-item active">
-                          <a class="nav-link selected-nav-link" href="/">Home</a>
+                            <a class="nav-link selected-nav-link" href="/">Home</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link selected-nav-link" href="/dashboard">Dashboard</a>
                         </li>
                     
                     {{#if logged_in}}
-                    <li class="nav-item logout">
-                        <a class="nav-link" id="log-in-out">Log out</a>
-                    </li>
+                    <nav>
+                    <button class="btn" id="logout">logout</button>
+                    </nav>
                     {{/if}}
 
                     {{#if logged_out}}
@@ -56,7 +56,11 @@
                     </ul>
                 </div>
         </nav>
+<<<<<<< HEAD
     {{{ body }}}
+=======
+        {{{ body }}}
+>>>>>>> 0fd99d1af4c91186357128f9ef833074b1d0f55a
 </body>
 
 </html>

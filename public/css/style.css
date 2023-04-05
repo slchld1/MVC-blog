@@ -13,6 +13,7 @@ li {
     padding: 1rem;
 }
 
+<<<<<<< HEAD
 .nav-item:hover {
     opacity: 40%;
 }
@@ -35,3 +36,40 @@ li {
     align-items: first baseline;
 }
 
+=======
+
+.container {
+    vertical-align: middle;
+    display: grid;
+    padding-top: 3rem;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+}
+
+.form-card {
+    margin: 0 auto;
+}
+
+
+.form-outline .form-control {
+    border: 1px solid #ddd;
+    min-height: auto;
+    padding: 0.32rem 0.75rem;
+    background: transparent;
+    transition: all .2s linear;
+}
+
+.input-note {
+    font-size: 0.8rem;
+    text-align: left;
+    text-indent: 2.3%;
+}
+
+.form-card {
+    margin: 0 auto;
+}
+.register-now {
+    margin: 1rem auto;
+}
+>>>>>>> 0fd99d1af4c91186357128f9ef833074b1d0f55a
