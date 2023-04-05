@@ -1,0 +1,21 @@
+<div class="container">
+    <h3 class="edit-title">Edit Post</h3>
+    <form class="edit-form" id="{{blog.id}}">
+        <div class="form-group">
+             <label for="blog-title">Blog title:</label>
+             <input type="text" id="blog-title" value="{{blog.blog_title}}"/>
+        </div>
+        <div class="form-group">
+            <label for="blog-context">Description:</label>
+            <input type="text" id="blog-context" value="{{blog.blog_description}}"/>
+        </div>
+        <div class="form-group">
+            <p>created on {{format_date blog.created_at}} by {{blog.user.username}}</p>
+        </div>
+        <button type="submit" class="button-save">Save</button>
+        <button type="button" class="button-red">Delete</button>
+    </form>
+</div>
+
+<script src="/js/post-edit.js"></script>
+<script src="/js/delete.js"></script>

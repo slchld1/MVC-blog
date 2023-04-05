@@ -1,30 +1,39 @@
 const router = require('express').Router();
-const { User, Blog } = require('../models')
-const auth = require('../utils/auth')
+const { User, Blog, Comment} = require('../models')
+const withAuth = require('../utils/auth')
 
-router.get('/', async (req, res) => {
-    try{
-        const dbBlog = await Blog.findAll({
-            include: [
-                {
+router.get('/', withAuth, (req, res) => {
+    Blog.findAll({
+        attributes: [
+            'id',
+            'blog_title',
+            'blog_description',
+            'created_at'
+        ],
+        include: [
+            {
+                model: Comment,
+                attributes: ['id', 'blog_id', 'comment_text', 'user_id'],
+                include: {
                     model: User,
-                    attributes: {
-                        exclude: ['password', 'username']
-                    },
+                    attributes: ['username']
                 },
-            ],
-        })
-        const renderedData = dbBlog.map((el) => el.get({pain: true}));
-        res.render('blogs', {
-            title: 'Tech Blog',
-            data: renderedData,
-            loggedIn: req.session.loggedIn,
-        });
-    } catch (err){
-        console.log(err)
-        res.status(500).json(err)
-    }
-})
+            },
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    }).then(data => {
+        const blogs = data.map(blog => blog.get({ plain: true }))
+        res.render('blogs', { blogs, loggedIn: req.session.loggedIn})
+    }).catch(err => {
+        if(err) {
+            console.log(err);
+            res.status(500).json(err);
+        }
+    });
+});
 
 router.get('/login', (req, res) => {
 	if (req.session.loggedIn) {

@@ -1,3 +1,20 @@
 <div class="container">
-    
+    <h2 class="dashboard-header">Your Posts</h2>
+    {{#if blogs.length}}
+        {{#each blogs as |blog|}}
+        <div class="blog-card"> 
+        <a class="edit-blog" href="/dashboard/edit/{{blog.id}}">
+        <header><b>Title:</b> {{blog_title}}</header>
+        <p><b>Description:</b> {{blog_description}}</p>
+        <small>{{format_date created_at}} created by {{blog.user.username}}</small>
+        <hr>
+        <br/></a>
+        </div>
+    {{/each}}
+
 </div>
+
+{{else}}
+<h6 class="status">You have no Posts.</h6>
+
+{{/if}}

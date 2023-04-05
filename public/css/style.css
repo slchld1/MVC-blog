@@ -13,7 +13,6 @@ li {
     padding: 1rem;
 }
 
-<<<<<<< HEAD
 .nav-item:hover {
     opacity: 40%;
 }
@@ -36,40 +35,33 @@ li {
     align-items: first baseline;
 }
 
-=======
-
-.container {
-    vertical-align: middle;
-    display: grid;
-    padding-top: 3rem;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-}
-
-.form-card {
-    margin: 0 auto;
-}
-
-
-.form-outline .form-control {
-    border: 1px solid #ddd;
-    min-height: auto;
-    padding: 0.32rem 0.75rem;
-    background: transparent;
-    transition: all .2s linear;
-}
-
-.input-note {
-    font-size: 0.8rem;
-    text-align: left;
-    text-indent: 2.3%;
-}
-
-.form-card {
-    margin: 0 auto;
-}
-.register-now {
+.blog-card { 
     margin: 1rem auto;
+    padding: 1rem auto;
+    display: flex;
+    flex-flow: column;
+    width: 80%;
+    height: 6rem;
+    border-radius: 0.5rem;
 }
->>>>>>> 0fd99d1af4c91186357128f9ef833074b1d0f55a
+
+.blog-card:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+    cursor: pointer;
+}
+.edit-blog {
+    text-decoration: none;
+    color: black;
+}
+.edit-blog:hover {
+    color: black;
+}
+
+.view-blog {
+    text-decoration: none;
+    color: black;
+}
+
+.view-blog:hover {
+    color: black;
+}

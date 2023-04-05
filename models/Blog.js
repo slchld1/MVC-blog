@@ -1,5 +1,5 @@
 const { Sequelize, Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connections.js');
+const sequelize = require('../config/connections');
 
 class Blog extends Model {}
 
@@ -16,10 +16,6 @@ Blog.init(
             allowNull: false,
         },
         blog_description: {
-            type: DataTypes.TEXT,
-            allowNull: false,
-        },
-        blog_body: {
             type: DataTypes.TEXT,
             allowNull: false,
         },
