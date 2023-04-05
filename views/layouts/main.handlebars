@@ -35,7 +35,9 @@
                         <li class="nav-item active">
                           <a class="nav-link selected-nav-link" href="/">Home</a>
                         </li>
-                    </ul>
+                        <li class="nav-item active">
+                            <a class="nav-link selected-nav-link" href="/dashboard">Dashboard</a>
+                        </li>
                     
                     {{#if logged_in}}
                     <li class="nav-item logout">
@@ -48,12 +50,13 @@
                         <a class="nav-link selected-nav-link" href="/login">Log In</a>
                     </li>
                     <li class="nav-item join">
-                        <a class="nav-link selected-nav-link" href="/register">register</a>
+                        <a class="nav-link selected-nav-link" href="/register">Register</a>
                     </li>
                     {{/if}}
+                    </ul>
                 </div>
         </nav>
-    {{ body }}
+    {{{ body }}}
 </body>
 
 </html>

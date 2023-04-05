@@ -42,7 +42,7 @@ router.get("/register", (req, res) => {
         return;
     }
 
-    res.render("register");
+    res.render("register", { title: 'register' });
 });
 
 module.exports = router;
