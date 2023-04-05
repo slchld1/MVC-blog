@@ -18,8 +18,7 @@ router.get('/', async (req, res) => {
         res.render('blogs', {
             title: 'Tech Blog',
             data: renderedData,
-            logged_in: req.session.logged_in,
-            logged_out: !req.session.logged_in,
+            loggedIn: req.session.loggedIn,
         });
     } catch (err){
         console.log(err)
@@ -28,7 +27,7 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/login', (req, res) => {
-	if (req.session.logged_in) {
+	if (req.session.loggedIn) {
 		res.redirect('/dashboard');
 		return;
 	}

@@ -10,6 +10,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link href="/css/style.css" rel="stylesheet"/>
+    <script src="/js/logout.js" defer></script>
 
   <!-- CSS -->
   <title>Tech-Blog</title>
@@ -38,14 +39,11 @@
                         <li class="nav-item active">
                             <a class="nav-link selected-nav-link" href="/dashboard">Dashboard</a>
                         </li>
-                    
-                    {{#if logged_in}}
-                    <nav>
-                    <button class="btn" id="logout">logout</button>
-                    </nav>
-                    {{/if}}
-
-                    {{#if logged_out}}
+                    {{#if loggedIn}}
+                    <li class="nav-item active">
+                        <a class="nav-link selected-nav-link" href="/" id="logout">Log out</a>
+                    </li>
+                    {{else}}
                     <li class="nav-item login">
                         <a class="nav-link selected-nav-link" href="/login">Log In</a>
                     </li>
@@ -54,13 +52,14 @@
                     </li>
                     {{/if}}
                     </ul>
+
+
                 </div>
         </nav>
-<<<<<<< HEAD
+
     {{{ body }}}
-=======
-        {{{ body }}}
->>>>>>> 0fd99d1af4c91186357128f9ef833074b1d0f55a
+
+
 </body>
 
 </html>
