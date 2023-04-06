@@ -61,6 +61,8 @@ To install this application to your local, `git clone` this repository into your
 
 Run `npm install` or `npm i` in order to install the following npm package,
 
+Then run `npm run seed` to seed your example database.
+
 In order to start the application, direct to the MVC_blogging folder type `npm start` in the command line.
 
 The application will be launched on `PORT 3001` of your localhost.
